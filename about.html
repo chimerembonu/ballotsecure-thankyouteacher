@@ -123,6 +123,27 @@
     .val h3 { font-size: 1.12rem; margin-bottom: 4px; }
     .val p { color: var(--muted); font-size: .96rem; }
 
+    /* Board of Directors */
+    .board { background: var(--paper); }
+    .board-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    .member { text-align: center; background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 20px; box-shadow: 0 12px 30px -24px rgba(4,51,28,.6); }
+    .member .avatar { width: 90px; height: 90px; border-radius: 50%; margin: 0 auto 16px; display: grid; place-items: center; font-size: 34px; color: #fff; background: linear-gradient(135deg, var(--green), var(--green-dark)); box-shadow: inset 0 0 0 3px rgba(255,255,255,.25); overflow: hidden; }
+    .member .avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .member h3 { font-size: 1.12rem; }
+    .member .role { color: var(--green); font-family: "Poppins", sans-serif; font-weight: 600; font-size: .82rem; letter-spacing: .8px; text-transform: uppercase; margin-top: 3px; }
+    .member p { color: var(--muted); font-size: .92rem; margin-top: 10px; }
+
+    /* Partners */
+    .partners { background: var(--cream); }
+    .partner-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .partner { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; min-height: 104px; display: grid; place-items: center; padding: 18px; text-align: center; box-shadow: 0 10px 26px -24px rgba(4,51,28,.6); }
+    .partner img { max-height: 56px; max-width: 100%; }
+    .partner .ph { color: var(--muted); font-family: "Poppins", sans-serif; font-weight: 600; font-size: .9rem; opacity: .85; }
+    .partner .ph small { display: block; font-weight: 500; font-size: .74rem; opacity: .8; margin-top: 2px; }
+    .partner-note { text-align: center; margin-top: 26px; color: var(--muted); font-size: 1rem; }
+    .partner-note a { color: var(--green); font-weight: 700; }
+    .partner-note a:hover { color: var(--red); }
+
     /* Contact */
     .contact { background: var(--paper); }
     .contact-card { max-width: 720px; margin: 0 auto; background: var(--cream); border: 1px dashed var(--line); border-radius: var(--radius); padding: 28px 26px; text-align: center; }
@@ -158,6 +179,8 @@
     @media (min-width: 720px) {
       .mv-grid { grid-template-columns: 1fr 1fr; }
       .val-grid { grid-template-columns: repeat(3, 1fr); }
+      .board-grid { grid-template-columns: repeat(3, 1fr); }
+      .partner-grid { grid-template-columns: repeat(4, 1fr); }
       .goal-card { grid-template-columns: 0.85fr 1.15fr; padding: 40px 38px; }
       .foot-top { grid-template-columns: 1.4fr 1fr 1fr; }
     }
@@ -267,8 +290,81 @@
     </div>
   </section>
 
+  <!-- ===== Board of Directors ===== -->
+  <!-- TODO: replace the placeholder names, roles, bios and avatars below with the real Board of Directors -->
+  <section class="board" id="board">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Leadership</span>
+        <h2>Board of Directors</h2>
+        <p>The Thank You Teacher Raffle is governed by a dedicated board that oversees its mission, integrity and impact.</p>
+      </div>
+      <div class="board-grid">
+        <div class="member">
+          <div class="avatar" aria-hidden="true">👤</div>
+          <h3>Full Name</h3>
+          <div class="role">Chairperson</div>
+          <p>Short one-line bio or affiliation.</p>
+        </div>
+        <div class="member">
+          <div class="avatar" aria-hidden="true">👤</div>
+          <h3>Full Name</h3>
+          <div class="role">Vice Chairperson</div>
+          <p>Short one-line bio or affiliation.</p>
+        </div>
+        <div class="member">
+          <div class="avatar" aria-hidden="true">👤</div>
+          <h3>Full Name</h3>
+          <div class="role">Executive Director</div>
+          <p>Short one-line bio or affiliation.</p>
+        </div>
+        <div class="member">
+          <div class="avatar" aria-hidden="true">👤</div>
+          <h3>Full Name</h3>
+          <div class="role">Treasurer</div>
+          <p>Short one-line bio or affiliation.</p>
+        </div>
+        <div class="member">
+          <div class="avatar" aria-hidden="true">👤</div>
+          <h3>Full Name</h3>
+          <div class="role">Secretary</div>
+          <p>Short one-line bio or affiliation.</p>
+        </div>
+        <div class="member">
+          <div class="avatar" aria-hidden="true">👤</div>
+          <h3>Full Name</h3>
+          <div class="role">Board Member</div>
+          <p>Short one-line bio or affiliation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Partners ===== -->
+  <!-- TODO: replace the placeholder tiles with real partner logos (swap each .ph span for <img src="..." alt="Partner name">) -->
+  <section class="partners" id="partners">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Working together</span>
+        <h2>Our Partners</h2>
+        <p>We're proud to work alongside organisations who share our vision for accessible cancer care in Ghana.</p>
+      </div>
+      <div class="partner-grid">
+        <div class="partner"><span class="ph">Partner<small>Logo</small></span></div>
+        <div class="partner"><span class="ph">Partner<small>Logo</small></span></div>
+        <div class="partner"><span class="ph">Partner<small>Logo</small></span></div>
+        <div class="partner"><span class="ph">Partner<small>Logo</small></span></div>
+        <div class="partner"><span class="ph">Partner<small>Logo</small></span></div>
+        <div class="partner"><span class="ph">Partner<small>Logo</small></span></div>
+        <div class="partner"><span class="ph">Partner<small>Logo</small></span></div>
+        <div class="partner"><span class="ph">Partner<small>Logo</small></span></div>
+      </div>
+      <p class="partner-note">Interested in partnering with us? <a href="#contact">Get in touch</a> — together we can build a healthier Ghana.</p>
+    </div>
+  </section>
+
   <!-- ===== Contact ===== -->
-  <section class="contact">
+  <section class="contact" id="contact">
     <div class="wrap">
       <div class="contact-card">
         <h3>Get in touch</h3>
