@@ -183,6 +183,21 @@
     .mp h3 { font-size: 1.06rem; margin-bottom: 2px; }
     .mp p { color: var(--muted); font-size: .96rem; }
 
+    /* ---------- Thank a Teacher band ---------- */
+    .tribute {
+      position: relative; overflow: hidden; color: #fff; text-align: center;
+      background:
+        radial-gradient(900px 400px at 80% -20%, rgba(244,180,0,.25), transparent 60%),
+        linear-gradient(160deg, var(--green) 0%, var(--green-dark) 100%);
+    }
+    .tribute::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .06; background-image: radial-gradient(rgba(255,255,255,.9) 1.4px, transparent 1.4px); background-size: 26px 26px; }
+    .tribute .inner { position: relative; z-index: 1; max-width: 840px; margin: 0 auto; }
+    .tribute .qmark { font-family: "Poppins", sans-serif; font-weight: 800; font-size: 4.5rem; line-height: .5; color: var(--gold); display: block; margin-bottom: 10px; }
+    .tribute blockquote { font-family: "Poppins", sans-serif; font-weight: 700; font-size: clamp(1.4rem, 4.2vw, 2.2rem); line-height: 1.3; }
+    .tribute blockquote .hl { color: var(--gold); }
+    .tribute .sub { color: rgba(255,255,255,.85); font-size: 1.05rem; margin-top: 18px; }
+    .tribute .btn { margin-top: 24px; }
+
     /* ---------- Prizes ---------- */
     .prizes { background: var(--cream); }
     .prize-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
@@ -386,6 +401,18 @@
     </div>
   </section>
 
+  <!-- ===== Thank a Teacher band ===== -->
+  <section class="tribute" id="thanks">
+    <div class="wrap">
+      <div class="inner">
+        <span class="qmark" aria-hidden="true">&ldquo;</span>
+        <blockquote>Behind every doctor, farmer, trader and president stands a <span class="hl">teacher</span> who believed first.</blockquote>
+        <p class="sub">Who made you who you are? Honour them — dedicate your raffle ticket to a teacher who changed your life.</p>
+        <a class="btn btn-primary btn-lg" href="#buy">🍎 Dedicate Your Ticket</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== Prizes ===== -->
   <section class="prizes" id="prizes">
     <div class="wrap">
@@ -479,6 +506,10 @@
           <div class="field">
             <label for="email">Email (optional)</label>
             <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" />
+          </div>
+          <div class="field">
+            <label for="dedicate">🍎 Dedicate this ticket to a teacher (optional)</label>
+            <input id="dedicate" name="dedicate" type="text" maxlength="80" placeholder="e.g. In honour of Madam Akua, my Primary 4 teacher" />
           </div>
           <div class="field">
             <label for="qty">Number of tickets</label>
@@ -608,7 +639,12 @@
         return;
       }
       // TODO: send to backend / payment gateway here. Example payload:
-      // { fullname, phone, email, qty, amount }
+      // { fullname, phone, email, dedicate, qty, amount }
+      var dedicate = document.getElementById('dedicate').value.trim();
+      if (dedicate) {
+        // textContent keeps user input safe (no HTML injection)
+        success.textContent = '🎉 Thank you! Your ticket honours "' + dedicate + '". We’ve received your request and will contact you shortly to complete payment. Good luck!';
+      }
       form.style.display = 'none';
       success.style.display = 'block';
       success.scrollIntoView({ behavior: 'smooth', block: 'center' });
