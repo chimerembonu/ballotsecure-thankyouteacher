@@ -129,11 +129,6 @@
     .video-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.16); border-radius: 20px; padding: 12px; box-shadow: var(--shadow); }
     .video-frame { position: relative; width: 100%; padding-top: 56.25%; border-radius: 13px; overflow: hidden; background: #0a0830; }
     .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-    /* Placeholder shown until the campaign video is available */
-    .video-ph { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 12px; text-align: center; padding: 22px; background: linear-gradient(150deg, #14114f 0%, #070533 100%); }
-    .video-ph .play { width: 62px; height: 62px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, var(--crimson), var(--crimson-lift)); color: #fff; font-size: 22px; padding-left: 4px; box-shadow: 0 12px 26px -10px rgba(153,34,37,.9); }
-    .video-ph strong { font-family: "Poppins", sans-serif; font-size: 1rem; }
-    .video-ph span { color: rgba(255,255,255,.66); font-size: .88rem; max-width: 320px; }
     .video-cap { color: rgba(255,255,255,.66); font-size: .82rem; text-align: center; padding: 11px 6px 3px; }
 
     /* ---------- Section scaffolding ---------- */
@@ -374,20 +369,11 @@
         <div class="video-col">
           <div class="video-card">
             <div class="video-frame">
-              <!--
-                TODO: when the campaign video is ready, delete the .video-ph block below
-                and uncomment this iframe, replacing VIDEO_ID with the YouTube video id:
-
-                <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
-                        title="Thank You, Teacher campaign video"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen loading="lazy"></iframe>
-              -->
-              <div class="video-ph">
-                <span class="play" aria-hidden="true">▶</span>
-                <strong>Campaign video coming soon</strong>
-                <span>Watch the Thank You, Teacher story — the teachers who shaped a nation, and the cause their students are backing.</span>
-              </div>
+              <iframe src="https://www.youtube-nocookie.com/embed/iUtnZpzkbG8"
+                      title="Thank You, Teacher campaign video"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen loading="lazy"></iframe>
             </div>
             <p class="video-cap">Thank You, Teacher — the 2026 national campaign film.</p>
           </div>
