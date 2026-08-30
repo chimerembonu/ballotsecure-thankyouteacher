@@ -67,14 +67,23 @@
     .btn-lg { font-size: 1.06rem; padding: 17px 32px; }
 
     /* ---------- Logo ---------- */
-    /* TODO: replace .logo-mark emoji with the official Thank You, Teacher logo image */
     .logo { display: inline-flex; align-items: center; gap: 11px; color: #fff; }
+    /* Both logos are dark-on-transparent, so they sit on a white chip/panel to stay legible on navy */
+    .logo-chip {
+      width: 44px; height: 44px; border-radius: 11px; flex: none;
+      background: #fff; display: grid; place-items: center; padding: 3px;
+    }
+    .logo-chip img { width: 100%; height: 100%; object-fit: contain; }
     .logo-mark {
       width: 42px; height: 42px; border-radius: 12px; flex: none;
       background: linear-gradient(135deg, var(--crimson) 0%, var(--crimson-lift) 100%);
       display: grid; place-items: center; font-size: 21px;
       box-shadow: inset 0 0 0 2px rgba(255,255,255,.25);
     }
+    /* Fallback marks show only while the logo files are missing */
+    .logo-fallback { display: none !important; }
+    .no-img .logo-fallback { display: inline-flex !important; }
+    .no-img .logo-chip, .no-img .hero-logo-panel { display: none; }
     .logo-text { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: .2px; line-height: 1.2; }
     .logo-text small { display: block; font-weight: 500; font-size: .66rem; color: var(--sky); letter-spacing: 1.4px; text-transform: uppercase; margin-top: 2px; }
 
@@ -109,8 +118,11 @@
       background-image: radial-gradient(rgba(255,255,255,.9) 1.4px, transparent 1.4px);
       background-size: 26px 26px;
     }
-    .hero-inner { position: relative; z-index: 1; padding: 40px 0 60px; }
-    .hero-logo { display: flex; justify-content: center; margin-bottom: 38px; }
+    /* keep .wrap's 20px side gutters — a padding shorthand here would wipe them out */
+    .hero-inner { position: relative; z-index: 1; padding: 40px 20px 60px; }
+    .hero-logo { display: block; text-align: center; margin-bottom: 38px; }
+    .hero-logo-panel { display: inline-block; max-width: 100%; background: #fff; border-radius: 20px; padding: 20px 28px; box-shadow: var(--shadow); }
+    .hero-logo-panel img { display: block; width: 360px; max-width: 100%; height: auto; }
     .hero-logo .logo-mark { width: 62px; height: 62px; border-radius: 17px; font-size: 30px; }
     .hero-logo .logo-text { font-size: 1.3rem; }
     .hero-logo .logo-text small { font-size: .72rem; }
@@ -304,7 +316,7 @@
     @media (min-width: 960px) {
       .hero-grid { grid-template-columns: 1fr 1fr; gap: 46px; }
       .buy-grid { grid-template-columns: 1fr 1fr; gap: 46px; }
-      .hero-inner { padding: 46px 0 74px; }
+      .hero-inner { padding: 46px 20px 74px; }
     }
     @media (max-width: 860px) {
       .nav-toggle { display: block; }
@@ -329,7 +341,12 @@
   <header class="site">
     <div class="wrap nav">
       <a class="logo" href="#top" aria-label="Thank You, Teacher home">
-        <span class="logo-mark" aria-hidden="true">🍎</span>
+        <span class="logo-chip">
+          <img src="images/gnat-logo.png"
+               alt="Ghana National Association of Teachers"
+               onerror="this.closest('.logo').classList.add('no-img')" />
+        </span>
+        <span class="logo-mark logo-fallback" aria-hidden="true">🍎</span>
         <span class="logo-text">Thank You, Teacher<small>A GNAT National Initiative</small></span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
@@ -346,9 +363,16 @@
   <section class="hero" id="top">
     <div class="wrap hero-inner">
       <div class="hero-logo">
-        <span class="logo">
-          <span class="logo-mark" aria-hidden="true">🍎</span>
-          <span class="logo-text">Thank You, Teacher<small>A GNAT National Initiative</small></span>
+        <span class="logo-panel-wrap">
+          <span class="hero-logo-panel">
+            <img src="images/tyt-logo.png"
+                 alt="Thank You, Teacher — a Ghana National Association of Teachers campaign"
+                 onerror="this.closest('.hero-logo').classList.add('no-img')" />
+          </span>
+          <span class="logo logo-fallback">
+            <span class="logo-mark" aria-hidden="true">🍎</span>
+            <span class="logo-text">Thank You, Teacher<small>A GNAT National Initiative</small></span>
+          </span>
         </span>
       </div>
 
