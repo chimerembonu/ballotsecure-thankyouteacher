@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You Teacher Raffle | I Am Who I Am Because of a Teacher</title>
-  <meta name="description" content="I Am Who I Am Because of a Teacher. Say thank you by buying a Thank You Teacher Raffle ticket for just GHc 20 — win houses, EV cars, motorcycles and cash, and help build Ghana's first self-sustaining cancer care & research centre. 18+ only." />
+  <title>Thank You, Teacher | I Am Who I Am Because I Had a Teacher</title>
+  <meta name="description" content="Thank You, Teacher is an annual national fundraising initiative by the Ghana National Association of Teachers (GNAT). Buy a raffle ticket for GHS 50 and stand to win a 2-bedroom house, a 1-bedroom house, an electric vehicle, motorcycles and more. Grand Draw: December 1, 2026. 18+." />
   <meta name="theme-color" content="#020028" />
 
   <!-- Open Graph / social sharing -->
-  <meta property="og:title" content="Thank You Teacher Raffle — I Am Who I Am Because of a Teacher" />
-  <meta property="og:description" content="Say thank you in a way that changes lives. Buy a ticket for GHc 20 to win houses, EV cars, motorcycles & cash and help build Ghana's premier cancer care centre. 18+." />
+  <meta property="og:title" content="Thank You, Teacher — I Am Who I Am Because I Had a Teacher" />
+  <meta property="og:description" content="A GNAT national initiative. GHS 50 per ticket. Win a 2-bedroom house, a 1-bedroom house, an EV, motorcycles and hundreds more prizes. Grand Draw: December 1, 2026. 18+." />
   <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,33 +19,29 @@
   <style>
     :root {
       /* Midnight navy & crimson palette */
-      --green: #1b1760;
-      --green-dark: #0d0a4a;
-      --green-deep: #020028;
-      --gold: #992225;
-      --gold-soft: #4faef8;
-      --red: #992225;
-      --red-soft: #c9565a;
+      --navy: #1b1760;
+      --navy-mid: #0d0a4a;
+      --navy-deep: #020028;
+      --crimson: #992225;
+      --crimson-lift: #b7333a;
+      --sky: #4faef8;
       --ink: #15132b;
       --muted: #605e73;
       --paper: #ffffff;
-      --cream: #f6f5fa;
+      --mist: #f6f5fa;
       --line: #e4e2ef;
-      --shadow: 0 18px 45px -22px rgba(4, 51, 28, 0.55);
+      --shadow: 0 18px 45px -22px rgba(2, 0, 40, 0.55);
       --radius: 18px;
-      --maxw: 1120px;
+      --maxw: 1140px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 78px; }
     body {
       font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      color: var(--ink);
-      background: var(--cream);
-      line-height: 1.6;
-      overflow-x: hidden;
+      color: var(--ink); background: var(--mist); line-height: 1.65; overflow-x: hidden;
     }
-    h1, h2, h3, .display { font-family: "Poppins", system-ui, sans-serif; line-height: 1.15; }
+    h1, h2, h3, h4 { font-family: "Poppins", system-ui, sans-serif; line-height: 1.14; }
     img { max-width: 100%; display: block; }
     a { color: inherit; text-decoration: none; }
     .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
@@ -59,356 +55,384 @@
       text-align: center; line-height: 1.1;
     }
     .btn-primary {
-      background: linear-gradient(135deg, var(--gold) 0%, #b7333a 100%);
-      color: #ffffff;
-      box-shadow: 0 14px 30px -12px rgba(153, 34, 37, 0.85);
+      background: linear-gradient(135deg, var(--crimson) 0%, var(--crimson-lift) 100%);
+      color: #fff; box-shadow: 0 14px 30px -12px rgba(153, 34, 37, .85);
     }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 20px 38px -12px rgba(153, 34, 37, 0.95); }
-    .btn-ghost {
-      background: rgba(255, 255, 255, 0.12); color: #fff;
-      border: 1.5px solid rgba(255, 255, 255, 0.45);
-      backdrop-filter: blur(4px);
-    }
-    .btn-ghost:hover { background: rgba(255, 255, 255, 0.22); transform: translateY(-2px); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 20px 38px -12px rgba(153, 34, 37, .95); }
+    .btn-ghost { background: rgba(255,255,255,.10); color: #fff; border: 1.5px solid rgba(255,255,255,.45); backdrop-filter: blur(4px); }
+    .btn-ghost:hover { background: rgba(255,255,255,.2); transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
+    .btn-outline:hover { background: var(--navy); color: #fff; transform: translateY(-2px); }
     .btn-block { width: 100%; }
-    .btn-lg { font-size: 1.08rem; padding: 17px 34px; }
+    .btn-lg { font-size: 1.06rem; padding: 17px 32px; }
 
-    /* ---------- Header ---------- */
-    header.site {
-      position: sticky; top: 0; z-index: 50;
-      background: rgba(2, 0, 40, 0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    .nav { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 12px 0; }
-    .brand { display: flex; align-items: center; gap: 11px; color: #fff; }
-    .brand .mark {
+    /* ---------- Logo ---------- */
+    /* TODO: replace .logo-mark emoji with the official Thank You, Teacher logo image */
+    .logo { display: inline-flex; align-items: center; gap: 11px; color: #fff; }
+    .logo-mark {
       width: 42px; height: 42px; border-radius: 12px; flex: none;
-      background: linear-gradient(135deg, var(--gold) 0%, #b7333a 100%);
-      display: grid; place-items: center; font-size: 22px;
+      background: linear-gradient(135deg, var(--crimson) 0%, var(--crimson-lift) 100%);
+      display: grid; place-items: center; font-size: 21px;
       box-shadow: inset 0 0 0 2px rgba(255,255,255,.25);
     }
-    .brand .name { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 1.02rem; letter-spacing: .2px; }
-    .brand .name small { display: block; font-weight: 500; font-size: .68rem; color: var(--gold-soft); letter-spacing: 1.5px; text-transform: uppercase; }
-    .nav-cta { display: flex; align-items: center; gap: 12px; }
-    .age-pill {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-family: "Poppins", sans-serif; font-weight: 700; font-size: .74rem;
-      color: #fff; border: 1.5px solid var(--red-soft); background: rgba(153,34,37,.25);
-      padding: 6px 12px; border-radius: 999px; letter-spacing: .5px;
+    .logo-text { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: .2px; line-height: 1.2; }
+    .logo-text small { display: block; font-weight: 500; font-size: .66rem; color: var(--sky); letter-spacing: 1.4px; text-transform: uppercase; margin-top: 2px; }
+
+    /* ---------- Navigation ---------- */
+    header.site {
+      position: sticky; top: 0; z-index: 60;
+      background: rgba(2, 0, 40, .93); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
     }
-    .nav .btn { padding: 11px 22px; font-size: .92rem; }
-    .nav-link {
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; }
+    .nav-links { display: flex; align-items: center; gap: 22px; }
+    .nav-links a {
       color: rgba(255,255,255,.9); font-family: "Poppins", sans-serif; font-weight: 600;
-      font-size: .92rem; padding: 8px 4px; border-bottom: 2px solid transparent;
+      font-size: .93rem; padding: 6px 2px; border-bottom: 2px solid transparent;
       transition: color .15s ease, border-color .15s ease; white-space: nowrap;
     }
-    .nav-link:hover { color: #fff; border-color: var(--gold-soft); }
-    .nav-link.active { color: var(--gold-soft); border-color: var(--gold-soft); }
+    .nav-links a:hover { color: #fff; border-color: var(--sky); }
+    .nav-links .btn { padding: 11px 22px; font-size: .9rem; border-bottom: 0; }
+    .nav-links .btn:hover { border-color: transparent; }
+    .nav-toggle { display: none; background: none; border: 0; color: #fff; font-size: 1.6rem; cursor: pointer; padding: 4px 8px; line-height: 1; }
 
     /* ---------- Hero ---------- */
     .hero {
       position: relative; color: #fff; overflow: hidden;
       background:
-        radial-gradient(1100px 520px at 85% -10%, rgba(153,34,37,.28), transparent 60%),
-        radial-gradient(900px 500px at -5% 110%, rgba(88,80,200,.28), transparent 60%),
-        linear-gradient(160deg, var(--green) 0%, var(--green-dark) 55%, var(--green-deep) 100%);
+        radial-gradient(1100px 520px at 85% -10%, rgba(153,34,37,.30), transparent 60%),
+        radial-gradient(900px 500px at -5% 110%, rgba(79,174,248,.20), transparent 60%),
+        linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 55%, var(--navy-deep) 100%);
     }
     .hero::after {
       content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .07;
       background-image: radial-gradient(rgba(255,255,255,.9) 1.4px, transparent 1.4px);
       background-size: 26px 26px;
     }
-    .hero-inner {
-      position: relative; z-index: 1;
-      display: grid; grid-template-columns: 1fr; gap: 34px;
-      padding: 44px 0 56px;
+    .hero-inner { position: relative; z-index: 1; padding: 40px 0 60px; }
+    .hero-logo { display: flex; justify-content: center; margin-bottom: 38px; }
+    .hero-logo .logo-mark { width: 62px; height: 62px; border-radius: 17px; font-size: 30px; }
+    .hero-logo .logo-text { font-size: 1.3rem; }
+    .hero-logo .logo-text small { font-size: .72rem; }
+    .hero-grid { display: grid; grid-template-columns: 1fr; gap: 38px; align-items: center; }
+    .hero h1 {
+      font-size: clamp(2.1rem, 6.4vw, 3.5rem); font-weight: 800;
+      text-transform: uppercase; letter-spacing: -.5px;
     }
-    .eyebrow {
-      display: inline-flex; align-items: center; gap: 8px; max-width: 100%;
-      background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22);
-      color: var(--gold-soft); font-weight: 600; font-size: .8rem; letter-spacing: 1.2px; text-transform: uppercase;
-      padding: 8px 14px; border-radius: 999px; white-space: normal;
-    }
-    .hero h1 { font-size: clamp(2.1rem, 7vw, 3.5rem); font-weight: 800; margin: 18px 0 14px; }
-    .hero h1 .hl { color: var(--gold-soft); }
-    .hero .lede { font-size: clamp(1.02rem, 2.6vw, 1.18rem); color: rgba(255,255,255,.9); max-width: 560px; }
-    .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }
-    .hero-meta { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 28px; }
-    .hero-meta .item small { display: block; color: rgba(255,255,255,.7); font-size: .78rem; text-transform: uppercase; letter-spacing: 1px; }
-    .hero-meta .item strong { font-family: "Poppins", sans-serif; font-size: 1.25rem; font-weight: 700; }
+    .hero h1 .hl { color: var(--sky); }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 26px; margin-top: 30px; }
+    .hero-meta small { display: block; color: rgba(255,255,255,.68); font-size: .74rem; text-transform: uppercase; letter-spacing: 1.1px; }
+    .hero-meta strong { font-family: "Poppins", sans-serif; font-size: 1.16rem; font-weight: 700; }
 
-    /* Ticket card */
-    .ticket {
-      position: relative; background: var(--paper); color: var(--ink);
-      border-radius: 22px; box-shadow: var(--shadow); padding: 26px 24px;
-      max-width: 420px; width: 100%;
-    }
-    .ticket::before, .ticket::after {
-      content: ""; position: absolute; top: 50%; transform: translateY(-50%);
-      width: 26px; height: 26px; background: var(--green-dark); border-radius: 50%;
-    }
-    .ticket::before { left: -13px; }
-    .ticket::after { right: -13px; }
-    .ticket .tag { color: var(--green); font-weight: 700; font-family: "Poppins", sans-serif; letter-spacing: 1px; text-transform: uppercase; font-size: .78rem; }
-    .ticket .price { font-family: "Poppins", sans-serif; font-weight: 800; font-size: 3rem; color: var(--ink); line-height: 1; margin: 6px 0; }
-    .ticket .price span { font-size: 1.1rem; color: var(--muted); font-weight: 600; }
-    .ticket .dashed { border: 0; border-top: 2px dashed var(--line); margin: 16px 0; }
-    .ticket ul { list-style: none; display: grid; gap: 9px; }
-    .ticket li { display: flex; gap: 10px; align-items: flex-start; font-size: .95rem; }
-    .ticket li .ic { color: var(--green); font-weight: 800; flex: none; }
+    /* Video */
+    .video-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.16); border-radius: 20px; padding: 12px; box-shadow: var(--shadow); }
+    .video-frame { position: relative; width: 100%; padding-top: 56.25%; border-radius: 13px; overflow: hidden; background: #0a0830; }
+    .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    /* Placeholder shown until the campaign video is available */
+    .video-ph { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 12px; text-align: center; padding: 22px; background: linear-gradient(150deg, #14114f 0%, #070533 100%); }
+    .video-ph .play { width: 62px; height: 62px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, var(--crimson), var(--crimson-lift)); color: #fff; font-size: 22px; padding-left: 4px; box-shadow: 0 12px 26px -10px rgba(153,34,37,.9); }
+    .video-ph strong { font-family: "Poppins", sans-serif; font-size: 1rem; }
+    .video-ph span { color: rgba(255,255,255,.66); font-size: .88rem; max-width: 320px; }
+    .video-cap { color: rgba(255,255,255,.66); font-size: .82rem; text-align: center; padding: 11px 6px 3px; }
 
     /* ---------- Section scaffolding ---------- */
-    section { padding: 62px 0; }
-    .section-head { text-align: center; max-width: 660px; margin: 0 auto 40px; }
-    .kicker { color: var(--red); font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; font-size: .8rem; }
-    .section-head h2 { font-size: clamp(1.7rem, 4.5vw, 2.4rem); font-weight: 700; margin: 10px 0 12px; }
-    .section-head p { color: var(--muted); font-size: 1.04rem; }
+    section { padding: 66px 0; }
+    .kicker { color: var(--crimson); font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; font-size: .78rem; }
+    .sec-title { font-size: clamp(1.65rem, 4.6vw, 2.5rem); font-weight: 800; text-transform: uppercase; margin: 10px 0 16px; }
+    .sec-head { max-width: 760px; margin: 0 auto 42px; text-align: center; }
+    .sec-head p { color: var(--muted); font-size: 1.04rem; }
 
-    /* ---------- Mission ---------- */
-    .mission { background: var(--paper); }
-    .mission-grid { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; }
-    .mission-card {
-      background: linear-gradient(160deg, var(--green) 0%, var(--green-dark) 100%);
-      color: #fff; border-radius: var(--radius); padding: 30px 26px; box-shadow: var(--shadow);
-    }
-    .mission-card .big {
-      font-family: "Poppins", sans-serif; font-weight: 800; font-size: clamp(2.4rem, 9vw, 3.4rem);
-      color: var(--gold-soft); line-height: 1;
-    }
-    .mission-card .big small { display:block; font-size: .9rem; color: rgba(255,255,255,.85); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
-    .mission-points { display: grid; gap: 16px; }
-    .mp { display: flex; gap: 14px; align-items: flex-start; }
-    .mp .ic { width: 44px; height: 44px; flex: none; border-radius: 12px; display: grid; place-items: center; font-size: 20px; background: var(--cream); color: var(--green); border: 1px solid var(--line); }
-    .mp h3 { font-size: 1.06rem; margin-bottom: 2px; }
-    .mp p { color: var(--muted); font-size: .96rem; }
+    /* ---------- About ---------- */
+    .about { background: var(--paper); }
+    .about-grid { display: grid; grid-template-columns: 1fr; gap: 30px; align-items: start; }
+    .about-lead { font-family: "Poppins", sans-serif; font-weight: 700; font-size: clamp(1.15rem, 3vw, 1.5rem); line-height: 1.35; color: var(--navy); }
+    .about-body p { color: #43415c; font-size: 1.05rem; margin-bottom: 16px; }
+    .about-body p:last-child { margin-bottom: 0; }
+    .about-body strong { color: var(--ink); }
 
-    /* ---------- Thank a Teacher band ---------- */
-    .tribute {
-      position: relative; overflow: hidden; color: #fff; text-align: center;
-      background:
-        radial-gradient(900px 400px at 80% -20%, rgba(153,34,37,.25), transparent 60%),
-        linear-gradient(160deg, var(--green) 0%, var(--green-dark) 100%);
+    /* ---------- Impact ---------- */
+    .impact { position: relative; overflow: hidden; color: #fff; background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 60%, var(--navy-deep) 100%); }
+    .impact::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .06; background-image: radial-gradient(rgba(255,255,255,.9) 1.4px, transparent 1.4px); background-size: 26px 26px; }
+    .impact .wrap { position: relative; z-index: 1; }
+    .impact .kicker { color: var(--sky); }
+    .impact-intro { max-width: 760px; margin: 0 auto; text-align: center; }
+    .impact-intro p { color: rgba(255,255,255,.85); font-size: 1.05rem; margin-bottom: 14px; }
+    .centre-lines { display: grid; gap: 12px; max-width: 780px; margin: 38px auto 0; }
+    .centre-line {
+      display: flex; align-items: center; gap: 14px; text-align: left;
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
+      border-radius: 14px; padding: 16px 20px;
     }
-    .tribute::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .06; background-image: radial-gradient(rgba(255,255,255,.9) 1.4px, transparent 1.4px); background-size: 26px 26px; }
-    .tribute .inner { position: relative; z-index: 1; max-width: 840px; margin: 0 auto; }
-    .tribute .qmark { font-family: "Poppins", sans-serif; font-weight: 800; font-size: 4.5rem; line-height: .5; color: var(--gold-soft); display: block; margin-bottom: 10px; }
-    .tribute blockquote { font-family: "Poppins", sans-serif; font-weight: 700; font-size: clamp(1.4rem, 4.2vw, 2.2rem); line-height: 1.3; }
-    .tribute blockquote .hl { color: var(--gold-soft); }
-    .tribute .sub { color: rgba(255,255,255,.85); font-size: 1.05rem; margin-top: 18px; }
-    .tribute .btn { margin-top: 24px; }
+    .centre-line .ic { font-size: 22px; flex: none; }
+    .centre-line p { font-family: "Poppins", sans-serif; font-weight: 700; font-size: clamp(.98rem, 2.4vw, 1.16rem); text-transform: uppercase; letter-spacing: .3px; }
+    .impact-cta { text-align: center; margin-top: 40px; }
+    .impact-cta p { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 1.25rem; margin-bottom: 18px; }
 
     /* ---------- Prizes ---------- */
-    .prizes { background: var(--cream); }
-    .prize-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    .prizes { background: var(--mist); }
+    .prize-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
     .prize {
-      position: relative; background: var(--paper); border-radius: var(--radius);
-      border: 1px solid var(--line); padding: 26px 24px; box-shadow: 0 12px 30px -24px rgba(2,0,40,.6);
-      transition: transform .18s ease, box-shadow .18s ease; overflow: hidden;
+      position: relative; background: var(--paper); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 26px 24px; box-shadow: 0 12px 30px -26px rgba(2,0,40,.6);
+      transition: transform .18s ease, box-shadow .18s ease; display: flex; gap: 18px; align-items: flex-start;
     }
     .prize:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-    .prize .ribbon {
-      position: absolute; top: 18px; right: -34px; transform: rotate(45deg);
-      background: var(--red); color: #fff; font-family: "Poppins", sans-serif; font-weight: 700;
-      font-size: .68rem; letter-spacing: 1px; padding: 5px 44px; text-transform: uppercase;
-    }
-    .prize.first { border-color: var(--gold); }
-    .prize.first .ribbon { background: var(--gold-soft); color: #06264a; }
-    .prize .emoji { font-size: 42px; margin-bottom: 12px; }
-    .prize .lvl { font-family: "Poppins", sans-serif; color: var(--green); font-weight: 700; font-size: .82rem; letter-spacing: 1px; text-transform: uppercase; }
-    .prize h3 { font-size: 1.5rem; font-weight: 800; margin: 4px 0 6px; }
-    .prize p { color: var(--muted); font-size: .97rem; }
-    .prize .count { display: inline-block; margin-top: 14px; font-family: "Poppins", sans-serif; font-weight: 700; color: var(--red); background: rgba(153,34,37,.08); padding: 5px 12px; border-radius: 999px; font-size: .85rem; }
+    .prize.top { border-color: var(--sky); }
+    .prize .emoji { font-size: 38px; flex: none; line-height: 1; }
+    .prize .rank { font-family: "Poppins", sans-serif; color: var(--crimson); font-weight: 700; font-size: .76rem; letter-spacing: 1.3px; text-transform: uppercase; }
+    .prize h3 { font-size: 1.28rem; font-weight: 800; margin: 5px 0 0; text-transform: uppercase; }
+    .prize p { color: var(--muted); font-size: .94rem; margin-top: 6px; }
+
+    .consolation { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 26px; margin-top: 18px; box-shadow: 0 12px 30px -26px rgba(2,0,40,.6); }
+    .consolation .rank { font-family: "Poppins", sans-serif; color: var(--crimson); font-weight: 700; font-size: .76rem; letter-spacing: 1.3px; text-transform: uppercase; }
+    .consolation h3 { font-size: 1.28rem; font-weight: 800; margin: 5px 0 16px; text-transform: uppercase; }
+    .con-list { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    .con-item { display: flex; gap: 12px; align-items: flex-start; background: var(--mist); border-radius: 12px; padding: 14px 16px; }
+    .con-item .emoji { font-size: 24px; flex: none; }
+    .con-item strong { font-family: "Poppins", sans-serif; display: block; font-size: 1rem; }
+    .con-item span { color: var(--muted); font-size: .88rem; }
+
+    .prize-total { text-align: center; margin-top: 34px; }
+    .prize-total .big { font-family: "Poppins", sans-serif; font-weight: 800; font-size: clamp(1.5rem, 4.4vw, 2.1rem); text-transform: uppercase; color: var(--navy); }
+    .prize-total .total-line { display: inline-flex; align-items: center; gap: 10px; margin-top: 14px; background: var(--paper); border: 1px dashed var(--line); border-radius: 999px; padding: 10px 20px; font-family: "Poppins", sans-serif; font-weight: 700; color: var(--muted); }
+    .draw-band { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; margin-top: 22px; }
+    .draw-pill { display: inline-flex; align-items: center; gap: 9px; background: linear-gradient(135deg, var(--navy), var(--navy-mid)); color: #fff; font-family: "Poppins", sans-serif; font-weight: 700; padding: 12px 22px; border-radius: 999px; font-size: .96rem; }
+    .draw-pill .sky { color: var(--sky); }
+    .fineprint { color: var(--muted); font-size: .86rem; text-align: center; margin-top: 14px; }
 
     /* ---------- How it works ---------- */
     .how { background: var(--paper); }
-    .steps { display: grid; grid-template-columns: 1fr; gap: 18px; counter-reset: step; }
-    .step { display: flex; gap: 16px; align-items: flex-start; background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+    .steps { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .step { display: flex; gap: 16px; align-items: flex-start; background: var(--mist); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
     .step .num {
-      counter-increment: step; flex: none; width: 46px; height: 46px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--gold), #b7333a); color: #ffffff;
-      display: grid; place-items: center; font-family: "Poppins", sans-serif; font-weight: 800; font-size: 1.2rem;
+      flex: none; width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--crimson), var(--crimson-lift)); color: #fff;
+      display: grid; place-items: center; font-family: "Poppins", sans-serif; font-weight: 800; font-size: .98rem;
     }
-    .step .num::before { content: counter(step); }
-    .step h3 { font-size: 1.1rem; margin-bottom: 2px; }
+    .step h3 { font-size: 1.03rem; text-transform: uppercase; margin-bottom: 4px; letter-spacing: .3px; }
     .step p { color: var(--muted); font-size: .95rem; }
+    .step p .code { font-family: "Poppins", sans-serif; font-weight: 700; color: var(--navy); background: #e9e7f6; padding: 1px 8px; border-radius: 6px; }
 
-    /* ---------- Buy / form ---------- */
-    .buy { background: linear-gradient(160deg, var(--green-dark) 0%, var(--green-deep) 100%); color: #fff; }
-    .buy-grid { display: grid; grid-template-columns: 1fr; gap: 30px; align-items: start; }
-    .buy-copy h2 { font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 800; }
-    .buy-copy h2 .hl { color: var(--gold-soft); }
-    .buy-copy p { color: rgba(255,255,255,.85); margin-top: 12px; max-width: 460px; }
-    .trust { display: grid; gap: 12px; margin-top: 22px; }
-    .trust div { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,.92); font-size: .96rem; }
-    .trust .ic { color: var(--gold-soft); font-weight: 800; }
+    /* ---------- Check tickets ---------- */
+    .check { background: var(--mist); }
+    .check-card { max-width: 620px; margin: 0 auto; background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 32px 28px; box-shadow: var(--shadow); text-align: center; }
+    .check-card h2 { font-size: clamp(1.4rem, 4vw, 1.9rem); font-weight: 800; text-transform: uppercase; }
+    .check-card .sub { color: var(--muted); margin: 10px 0 22px; }
+    .check-result { display: none; margin-top: 18px; border-radius: 12px; padding: 15px; font-weight: 600; font-size: .95rem; background: rgba(79,174,248,.10); border: 1px solid var(--sky); color: #0d3f66; }
 
-    .form-card { background: var(--paper); color: var(--ink); border-radius: 22px; padding: 26px 24px; box-shadow: var(--shadow); }
-    .form-card h3 { font-size: 1.3rem; margin-bottom: 4px; }
-    .form-card .sub { color: var(--muted); font-size: .92rem; margin-bottom: 18px; }
-    .field { margin-bottom: 15px; }
+    /* ---------- Forms ---------- */
+    .field { margin-bottom: 16px; text-align: left; }
     .field label { display: block; font-weight: 600; font-size: .88rem; margin-bottom: 6px; }
     .field input, .field select {
-      width: 100%; padding: 13px 14px; border: 1.5px solid var(--line); border-radius: 12px;
-      font: inherit; background: #fff; color: var(--ink); transition: border .15s ease, box-shadow .15s ease;
+      width: 100%; padding: 14px; border: 1.5px solid var(--line); border-radius: 12px;
+      font: inherit; background: #fff; color: var(--ink);
+      transition: border .15s ease, box-shadow .15s ease;
     }
-    .field input:focus, .field select:focus { outline: 0; border-color: var(--green); box-shadow: 0 0 0 3px rgba(27,23,96,.15); }
-    .summary { display: flex; justify-content: space-between; align-items: center; background: var(--cream); border: 1px dashed var(--line); border-radius: 12px; padding: 12px 14px; margin: 4px 0 14px; font-size: .95rem; }
-    .summary strong { font-family: "Poppins", sans-serif; font-size: 1.25rem; color: var(--green); }
-    .check { display: flex; gap: 10px; align-items: flex-start; font-size: .86rem; color: var(--muted); margin: 4px 0 16px; }
-    .check input { margin-top: 3px; width: 18px; height: 18px; flex: none; accent-color: var(--green); }
+    .field input:focus, .field select:focus { outline: 0; border-color: var(--navy); box-shadow: 0 0 0 3px rgba(27,23,96,.14); }
+    .seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .seg label {
+      display: block; text-align: center; cursor: pointer; border: 1.5px solid var(--line);
+      border-radius: 12px; padding: 13px 6px; font-family: "Poppins", sans-serif; font-weight: 600;
+      font-size: .92rem; transition: all .15s ease; margin: 0;
+    }
+    .seg input { position: absolute; opacity: 0; pointer-events: none; }
+    .seg input:checked + span { color: #fff; }
+    .seg label:has(input:checked) { background: linear-gradient(135deg, var(--navy), var(--navy-mid)); border-color: var(--navy); color: #fff; }
+    .seg label:hover { border-color: var(--navy); }
+
+    /* ---------- Buy tickets ---------- */
+    .buy { color: #fff; position: relative; overflow: hidden; background: linear-gradient(160deg, var(--navy-mid) 0%, var(--navy-deep) 100%); }
+    .buy::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .06; background-image: radial-gradient(rgba(255,255,255,.9) 1.4px, transparent 1.4px); background-size: 26px 26px; }
+    .buy .wrap { position: relative; z-index: 1; }
+    .buy-grid { display: grid; grid-template-columns: 1fr; gap: 30px; align-items: start; }
+    .buy-copy .kicker { color: var(--sky); }
+    .buy-copy h2 { font-size: clamp(1.7rem, 5vw, 2.5rem); font-weight: 800; text-transform: uppercase; margin: 10px 0 8px; }
+    .price-tag { font-family: "Poppins", sans-serif; font-weight: 800; font-size: clamp(1.6rem, 5vw, 2.2rem); color: var(--sky); }
+    .buy-copy p { color: rgba(255,255,255,.85); margin-top: 12px; max-width: 460px; }
+    .trust { display: grid; gap: 11px; margin-top: 24px; }
+    .trust div { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,.92); font-size: .95rem; }
+    .trust .ic { color: var(--sky); font-weight: 800; }
+
+    .form-card { background: var(--paper); color: var(--ink); border-radius: 22px; padding: 28px 26px; box-shadow: var(--shadow); }
+    .form-card h3 { font-size: 1.25rem; text-transform: uppercase; }
+    .form-card .sub { color: var(--muted); font-size: .92rem; margin: 6px 0 20px; }
+    .summary { display: flex; justify-content: space-between; align-items: center; background: var(--mist); border: 1px dashed var(--line); border-radius: 12px; padding: 13px 16px; margin: 6px 0 16px; font-size: .95rem; }
+    .summary strong { font-family: "Poppins", sans-serif; font-size: 1.3rem; color: var(--navy); }
+    .check-line { display: flex; gap: 10px; align-items: flex-start; font-size: .87rem; color: var(--muted); margin: 6px 0 18px; }
+    .check-line input { margin-top: 3px; width: 18px; height: 18px; flex: none; accent-color: var(--navy); }
     .form-note { text-align: center; font-size: .8rem; color: var(--muted); margin-top: 12px; }
-    .form-success { display: none; background: rgba(27,23,96,.08); border: 1px solid var(--green); color: var(--green-dark); border-radius: 12px; padding: 16px; text-align: center; font-weight: 600; }
+    .form-success { display: none; background: rgba(79,174,248,.10); border: 1px solid var(--sky); color: #0d3f66; border-radius: 12px; padding: 18px; text-align: center; font-weight: 600; }
 
     /* ---------- FAQ ---------- */
-    .faq { background: var(--cream); }
-    .faq-list { max-width: 760px; margin: 0 auto; display: grid; gap: 12px; }
-    details { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 4px 20px; }
-    details summary { cursor: pointer; list-style: none; font-family: "Poppins", sans-serif; font-weight: 600; padding: 16px 0; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .faq { background: var(--paper); }
+    .faq-list { max-width: 800px; margin: 0 auto; display: grid; gap: 11px; }
+    details { background: var(--mist); border: 1px solid var(--line); border-radius: 14px; padding: 2px 20px; }
+    details summary { cursor: pointer; list-style: none; font-family: "Poppins", sans-serif; font-weight: 600; padding: 16px 0; display: flex; justify-content: space-between; align-items: center; gap: 14px; font-size: .99rem; }
     details summary::-webkit-details-marker { display: none; }
-    details summary::after { content: "+"; font-size: 1.5rem; color: var(--green); font-weight: 700; transition: transform .2s ease; }
+    details summary::after { content: "+"; font-size: 1.45rem; color: var(--crimson); font-weight: 700; transition: transform .2s ease; flex: none; }
     details[open] summary::after { transform: rotate(45deg); }
-    details p { color: var(--muted); padding: 0 0 16px; }
+    details p { color: var(--muted); padding: 0 0 17px; font-size: .96rem; }
+    details p a { color: var(--navy); font-weight: 700; text-decoration: underline; }
 
     /* ---------- Footer ---------- */
-    footer.site { background: var(--green-deep); color: rgba(255,255,255,.78); padding: 44px 0 30px; }
-    .foot-top { display: grid; gap: 22px; grid-template-columns: 1fr; }
-    .foot-brand .brand { color: #fff; }
-    .foot-brand p { margin-top: 12px; font-size: .92rem; max-width: 420px; }
-    .foot-links h4 { color: #fff; font-family: "Poppins", sans-serif; font-size: .95rem; margin-bottom: 10px; }
-    .foot-links a { display: block; padding: 4px 0; font-size: .92rem; color: rgba(255,255,255,.78); }
-    .foot-links a:hover { color: var(--gold-soft); }
-    .disclaimer { margin-top: 26px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); font-size: .82rem; display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; align-items: center; }
-    .disclaimer .age-pill { border-color: rgba(255,255,255,.4); background: rgba(255,255,255,.06); }
+    footer.site { background: var(--navy-deep); color: rgba(255,255,255,.76); padding: 52px 0 30px; text-align: center; }
+    .foot-tagline { font-family: "Poppins", sans-serif; font-weight: 800; color: #fff; font-size: clamp(1.1rem, 3.4vw, 1.6rem); text-transform: uppercase; max-width: 720px; margin: 0 auto 26px; line-height: 1.3; }
+    .foot-tagline .hl { color: var(--sky); }
+    .foot-logo { display: flex; justify-content: center; margin-bottom: 22px; }
+    .foot-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 18px; margin: 0 auto 22px; max-width: 720px; }
+    .foot-links a { font-size: .92rem; color: rgba(255,255,255,.78); }
+    .foot-links a:hover { color: var(--sky); }
+    .foot-note { border-top: 1px solid rgba(255,255,255,.12); padding-top: 22px; font-size: .84rem; display: grid; gap: 8px; }
+    .foot-note a { color: var(--sky); }
+    .licence { display: inline-flex; align-items: center; gap: 8px; justify-content: center; font-weight: 600; }
 
     /* ---------- Sticky mobile CTA ---------- */
     .mobile-bar {
-      position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
-      display: none; align-items: center; justify-content: space-between; gap: 12px;
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 70; display: none;
+      align-items: center; justify-content: space-between; gap: 12px;
       background: rgba(2,0,40,.97); backdrop-filter: blur(8px);
       padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); border-top: 1px solid rgba(255,255,255,.1);
     }
-    .mobile-bar .info { color: #fff; line-height: 1.2; }
-    .mobile-bar .info small { display: block; color: var(--gold-soft); font-size: .72rem; }
-    .mobile-bar .info strong { font-family: "Poppins", sans-serif; font-size: 1.05rem; }
-    .mobile-bar .info { flex: 1 1 auto; min-width: 0; }
+    .mobile-bar .info { color: #fff; line-height: 1.2; flex: 1 1 auto; min-width: 0; }
+    .mobile-bar .info small { display: block; color: var(--sky); font-size: .72rem; }
+    .mobile-bar .info strong { font-family: "Poppins", sans-serif; font-size: 1.02rem; }
     .mobile-bar .btn { padding: 13px 20px; flex: none; white-space: nowrap; }
 
     /* ---------- Responsive ---------- */
-    @media (min-width: 720px) {
+    @media (min-width: 760px) {
       .prize-grid { grid-template-columns: repeat(2, 1fr); }
+      .con-list { grid-template-columns: repeat(3, 1fr); }
       .steps { grid-template-columns: repeat(2, 1fr); }
-      .mission-grid { grid-template-columns: 0.9fr 1.1fr; }
-      .foot-top { grid-template-columns: 1.4fr 1fr 1fr; }
+      .about-grid { grid-template-columns: .85fr 1.15fr; gap: 44px; }
     }
-    @media (min-width: 940px) {
-      .hero-inner { grid-template-columns: 1.15fr .85fr; align-items: center; padding: 64px 0 76px; }
-      .buy-grid { grid-template-columns: 1fr 1fr; gap: 44px; }
+    @media (min-width: 960px) {
+      .hero-grid { grid-template-columns: 1fr 1fr; gap: 46px; }
+      .buy-grid { grid-template-columns: 1fr 1fr; gap: 46px; }
+      .hero-inner { padding: 46px 0 74px; }
     }
-    @media (max-width: 640px) {
-      .nav .btn-desktop { display: none; }
+    @media (max-width: 860px) {
+      .nav-toggle { display: block; }
+      .nav-links {
+        position: absolute; top: 100%; left: 0; right: 0; flex-direction: column;
+        align-items: stretch; gap: 4px; padding: 12px 20px 18px;
+        background: rgba(2,0,40,.98); border-bottom: 1px solid rgba(255,255,255,.1);
+        display: none;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 2px; border-bottom: 1px solid rgba(255,255,255,.08); }
+      .nav-links .btn { margin-top: 8px; justify-content: center; }
       .mobile-bar { display: flex; }
-      body { padding-bottom: 76px; }
-      .prize .ribbon { display: none; }
-      .eyebrow { font-size: .68rem; letter-spacing: .8px; gap: 6px; }
+      body { padding-bottom: 74px; }
     }
     @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; transition: none !important; } }
   </style>
 </head>
 <body>
 
-  <!-- ===== Header ===== -->
+  <!-- ===== Navigation ===== -->
   <header class="site">
     <div class="wrap nav">
-      <a class="brand" href="#top" aria-label="Thank You Teacher Raffle home">
-        <span class="mark" aria-hidden="true">🍎</span>
-        <span class="name">Thank You Teacher Raffle<small>Cancer Foundation · GNAT Fund</small></span>
+      <a class="logo" href="#top" aria-label="Thank You, Teacher home">
+        <span class="logo-mark" aria-hidden="true">🍎</span>
+        <span class="logo-text">Thank You, Teacher<small>A GNAT National Initiative</small></span>
       </a>
-      <div class="nav-cta">
-        <a class="nav-link" href="about.html">About</a>
-        <a class="btn btn-primary btn-desktop" href="#buy">Buy Tickets</a>
-        <span class="age-pill" aria-label="18 plus only">18+ Only</span>
-      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#prizes">Prizes</a>
+        <a href="#check">Check Tickets</a>
+        <a class="btn btn-primary" href="#buy">Buy Tickets</a>
+      </nav>
     </div>
   </header>
 
   <!-- ===== Hero ===== -->
-  <section class="hero" id="top" style="padding:0;">
+  <section class="hero" id="top">
     <div class="wrap hero-inner">
-      <div class="hero-copy">
-        <span class="eyebrow">🍎 The Thank You Teacher Raffle</span>
-        <h1>I Am Who I Am <span class="hl">Because of a Teacher</span>.</h1>
-        <p class="lede">
-          Say thank you in a way that changes lives. Buy your <strong>Thank You Teacher Raffle</strong> ticket for just <strong>GHc 20</strong> — win houses, EV cars, motorcycles and cash, and help build Ghana's first self-sustaining cancer care &amp; research centre.
-        </p>
-        <div class="hero-cta">
-          <a class="btn btn-primary btn-lg" href="#buy">🎟️ Buy Your Ticket — GHc 20</a>
-          <a class="btn btn-ghost btn-lg" href="#prizes">See the Prizes</a>
-        </div>
-        <div class="hero-meta">
-          <div class="item"><small>Ticket Price</small><strong>GHc 20</strong></div>
-          <div class="item"><small>Top Prizes</small><strong>25 Winners</strong></div>
-          <div class="item"><small>Our Goal</small><strong>GHC 100M / yr</strong></div>
-        </div>
+      <div class="hero-logo">
+        <span class="logo">
+          <span class="logo-mark" aria-hidden="true">🍎</span>
+          <span class="logo-text">Thank You, Teacher<small>A GNAT National Initiative</small></span>
+        </span>
       </div>
 
-      <div class="ticket" role="img" aria-label="Raffle ticket priced at 20 Ghana Cedis">
-        <div class="tag">🎟️ Official Raffle Ticket</div>
-        <div class="price"><span>GHc</span> 20</div>
-        <p style="color:var(--muted); font-size:.92rem;">Your chance to win — and to help save lives across Ghana.</p>
-        <hr class="dashed" />
-        <ul>
-          <li><span class="ic">✓</span> Enter every prize draw with a single ticket</li>
-          <li><span class="ic">✓</span> 100% supports cancer care &amp; research</li>
-          <li><span class="ic">✓</span> Open to everyone aged 18 and above</li>
-          <li><span class="ic">✓</span> The more tickets, the bigger your odds</li>
-        </ul>
-        <a class="btn btn-primary btn-block btn-lg" href="#buy" style="margin-top:18px;">Get My Ticket</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Mission ===== -->
-  <section class="mission" id="mission">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="kicker">Thank you, teacher</span>
-        <h2>Every one of us was shaped by a teacher</h2>
-        <p>We are who we are because of a teacher. This is how we say thank you — proceeds from the Thank You Teacher Raffle go directly to the Cancer Foundation of the Ghana National Association of Teachers' Fund, turning gratitude into a lasting national legacy.</p>
-      </div>
-      <div class="mission-grid">
-        <div class="mission-card">
-          <div class="big"><small>Annual target</small>GHC 100M</div>
-          <p style="margin-top:14px; color:rgba(255,255,255,.88);">
-            Raised every year through this raffle to finance and sustain a world-class cancer care &amp; research centre — so no Ghanaian has to travel abroad, or go without, for life-saving treatment.
-          </p>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1>I am who I am <span class="hl">because I had a teacher</span>.</h1>
+          <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="#buy">🎟️ Buy a Ticket</a>
+            <a class="btn btn-ghost btn-lg" href="#prizes">See the Prizes</a>
+          </div>
+          <div class="hero-meta">
+            <div><small>Per ticket</small><strong>GHS 50</strong></div>
+            <div><small>Grand Draw</small><strong>1 Dec 2026</strong></div>
+            <div><small>Eligibility</small><strong>18+</strong></div>
+          </div>
         </div>
-        <div class="mission-points">
-          <div class="mp">
-            <span class="ic" aria-hidden="true">🏥</span>
-            <div><h3>A centre built to last</h3><p>Ghana's first <em>self-sustaining</em> cancer care and research facility — designed to fund its own future.</p></div>
-          </div>
-          <div class="mp">
-            <span class="ic" aria-hidden="true">🎗️</span>
-            <div><h3>Care for every Ghanaian</h3><p>World-class diagnosis, treatment and research, accessible right here at home.</p></div>
-          </div>
-          <div class="mp">
-            <span class="ic" aria-hidden="true">🍎</span>
-            <div><h3>A thank you to our teachers</h3><p>A tribute to the educators who shape our nation — championed by the GNAT Fund.</p></div>
+
+        <div class="video-col">
+          <div class="video-card">
+            <div class="video-frame">
+              <!--
+                TODO: when the campaign video is ready, delete the .video-ph block below
+                and uncomment this iframe, replacing VIDEO_ID with the YouTube video id:
+
+                <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
+                        title="Thank You, Teacher campaign video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+              -->
+              <div class="video-ph">
+                <span class="play" aria-hidden="true">▶</span>
+                <strong>Campaign video coming soon</strong>
+                <span>Watch the Thank You, Teacher story — the teachers who shaped a nation, and the cause their students are backing.</span>
+              </div>
+            </div>
+            <p class="video-cap">Thank You, Teacher — the 2026 national campaign film.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Thank a Teacher band ===== -->
-  <section class="tribute" id="thanks">
+  <!-- ===== About ===== -->
+  <section class="about" id="about">
     <div class="wrap">
-      <div class="inner">
-        <span class="qmark" aria-hidden="true">&ldquo;</span>
-        <blockquote>Behind every doctor, farmer, trader and president stands a <span class="hl">teacher</span> who believed first.</blockquote>
-        <p class="sub">Who made you who you are? Honour them — dedicate your raffle ticket to a teacher who changed your life.</p>
-        <a class="btn btn-primary btn-lg" href="#buy">🍎 Dedicate Your Ticket</a>
+      <div class="sec-head">
+        <span class="kicker">About</span>
+        <h2 class="sec-title">Everyone has a teacher story.</h2>
+      </div>
+      <div class="about-grid">
+        <p class="about-lead">We leave their classrooms. We grow up. We move on.</p>
+        <div class="about-body">
+          <p>But some of what they gave us stays. The confidence to try. The discipline to keep going. The belief that we could become more than we imagined.</p>
+          <p><strong>Thank You, Teacher</strong> is an annual national fundraising initiative by the <strong>Ghana National Association of Teachers (GNAT)</strong>, created to recognise the teachers whose influence reaches far beyond the classroom.</p>
+          <p>Each year, this initiative brings Ghanaians together to celebrate teachers while raising funds to support a cause that matters to the nation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Impact ===== -->
+  <section class="impact" id="impact">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Impact</span>
+        <h2 class="sec-title">A thank you that goes further.</h2>
+      </div>
+      <div class="impact-intro">
+        <p>Thank You, Teacher is an annual fundraising initiative, with its area of impact potentially changing from year to year.</p>
+        <p>For this year's campaign, proceeds will support the <strong>GNAT Cancer Foundation</strong> and its vision for stronger cancer care and research capacity in Ghana.</p>
+      </div>
+      <div class="centre-lines">
+        <div class="centre-line"><span class="ic" aria-hidden="true">🏥</span><p>A centre that treats.</p></div>
+        <div class="centre-line"><span class="ic" aria-hidden="true">🔬</span><p>A centre that researches.</p></div>
+        <div class="centre-line"><span class="ic" aria-hidden="true">🌍</span><p>A centre built to serve the world for generations to come.</p></div>
+      </div>
+      <div class="impact-cta">
+        <p>Ready to change a life?</p>
+        <a class="btn btn-primary btn-lg" href="#buy">🎟️ Buy a Ticket</a>
       </div>
     </div>
   </section>
@@ -416,47 +440,74 @@
   <!-- ===== Prizes ===== -->
   <section class="prizes" id="prizes">
     <div class="wrap">
-      <div class="section-head">
-        <span class="kicker">Prizes to be won</span>
-        <h2>25 life-changing prizes. Could one be yours?</h2>
-        <p>One ticket enters you into every draw below. Win — and know your GHc 20 helped beat cancer.</p>
+      <div class="sec-head">
+        <span class="kicker">Prizes</span>
+        <h2 class="sec-title">25 Prizes.</h2>
+        <p>The Thank You, Teacher raffle features prizes across four categories, plus consolation prizes.</p>
       </div>
+
       <div class="prize-grid">
-        <div class="prize first">
-          <span class="ribbon">1st Prize</span>
-          <div class="emoji" aria-hidden="true">🏠</div>
-          <span class="lvl">First Prize</span>
-          <h3>5 × 2-Bedroom Houses</h3>
-          <p>Five lucky winners each take home a brand-new 2-bedroom house.</p>
-          <span class="count">5 winners</span>
+        <div class="prize top">
+          <span class="emoji" aria-hidden="true">🏠</span>
+          <div>
+            <span class="rank">1st Prize</span>
+            <h3>1 × 2-Bedroom House</h3>
+            <p>A brand-new two-bedroom house for one grand-prize winner.</p>
+          </div>
         </div>
         <div class="prize">
-          <span class="ribbon">2nd Prize</span>
-          <div class="emoji" aria-hidden="true">🚗</div>
-          <span class="lvl">Second Prize</span>
-          <h3>5 × Electric Cars</h3>
-          <p>Drive home in a brand-new EV — clean, modern and yours to keep.</p>
-          <span class="count">5 winners</span>
+          <span class="emoji" aria-hidden="true">🏡</span>
+          <div>
+            <span class="rank">2nd Prize</span>
+            <h3>1 × 1-Bedroom House</h3>
+            <p>A brand-new one-bedroom house for the second-place winner.</p>
+          </div>
         </div>
         <div class="prize">
-          <span class="ribbon">3rd Prize</span>
-          <div class="emoji" aria-hidden="true">🏍️</div>
-          <span class="lvl">Third Prize</span>
-          <h3>5 × Motorcycles</h3>
-          <p>Five winners ride away on a brand-new motorcycle.</p>
-          <span class="count">5 winners</span>
+          <span class="emoji" aria-hidden="true">🚗</span>
+          <div>
+            <span class="rank">3rd Prize</span>
+            <h3>1 × Electric Vehicle</h3>
+            <p>Drive away in a brand-new electric vehicle.</p>
+          </div>
         </div>
         <div class="prize">
-          <span class="ribbon">Bonus</span>
-          <div class="emoji" aria-hidden="true">💵</div>
-          <span class="lvl">Second Level Draw</span>
-          <h3>10 × Cash Cheques</h3>
-          <p>Ten winners each receive a cheque valued at <strong>GHS 15,000</strong>.</p>
-          <span class="count">10 winners · GHS 15,000 each</span>
+          <span class="emoji" aria-hidden="true">🏍️</span>
+          <div>
+            <span class="rank">4th Prize</span>
+            <h3>5 × Motorcycles</h3>
+            <p>Five winners each ride away on a brand-new motorcycle.</p>
+          </div>
         </div>
       </div>
-      <div style="text-align:center; margin-top:34px;">
-        <a class="btn btn-primary btn-lg" href="#buy">🎟️ I'm in — Buy My Ticket</a>
+
+      <div class="consolation">
+        <span class="rank">5th Prizes — Consolation</span>
+        <h3>And hundreds more to be won</h3>
+        <div class="con-list">
+          <div class="con-item">
+            <span class="emoji" aria-hidden="true">🧺</span>
+            <div><strong>15 × Household Appliances</strong><span>Fifteen winners take home an appliance.</span></div>
+          </div>
+          <div class="con-item">
+            <span class="emoji" aria-hidden="true">👕</span>
+            <div><strong>100 × Branded Merchandise</strong><span>One hundred official campaign items.</span></div>
+          </div>
+          <div class="con-item">
+            <span class="emoji" aria-hidden="true">📱</span>
+            <div><strong>Airtime</strong><span>Instagram &amp; TikTok — random selection.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="prize-total">
+        <div class="big">100s of prizes to be won.</div>
+        <!-- TODO: replace with the confirmed total prize value once available -->
+        <div class="total-line"><span aria-hidden="true">🏆</span> Total prize value: to be announced</div>
+        <div class="draw-band">
+          <span class="draw-pill"><span aria-hidden="true">📅</span> Grand Draw: <span class="sky">December 1, 2026</span></span>
+        </div>
+        <p class="fineprint">Terms &amp; Conditions apply.</p>
       </div>
     </div>
   </section>
@@ -464,79 +515,121 @@
   <!-- ===== How it works ===== -->
   <section class="how" id="how">
     <div class="wrap">
-      <div class="section-head">
+      <div class="sec-head">
         <span class="kicker">How it works</span>
-        <h2>Three simple steps to your ticket</h2>
+        <h2 class="sec-title">How it works</h2>
       </div>
       <div class="steps">
-        <div class="step"><span class="num" aria-hidden="true"></span><div><h3>Confirm you're 18+</h3><p>This raffle is strictly for participants aged 18 years and above.</p></div></div>
-        <div class="step"><span class="num" aria-hidden="true"></span><div><h3>Reserve your tickets</h3><p>Choose how many tickets you want at GHc 20 each and share your details.</p></div></div>
-        <div class="step"><span class="num" aria-hidden="true"></span><div><h3>Pay &amp; get entered</h3><p>Complete your payment and your number is entered into every draw.</p></div></div>
-        <div class="step"><span class="num" aria-hidden="true"></span><div><h3>Wait for the draw</h3><p>Winners are selected and announced. Good luck — and thank you!</p></div></div>
+        <div class="step">
+          <span class="num">01</span>
+          <div><h3>Eligibility</h3><p>Participants must be 18 years or older, subject to the official Terms &amp; Conditions.</p></div>
+        </div>
+        <div class="step">
+          <span class="num">02</span>
+          <div><h3>Select your tickets</h3><p>Choose the number of tickets you would like to purchase. GHS 50 per ticket.</p></div>
+        </div>
+        <div class="step">
+          <span class="num">03</span>
+          <!-- TODO: replace the placeholder shortcode below with the confirmed USSD code -->
+          <div><h3>Purchase</h3><p>Purchase your ticket via the shortcode <span class="code">*#</span> on all networks, or directly on this website by clicking <strong>Buy a Ticket</strong>.</p></div>
+        </div>
+        <div class="step">
+          <span class="num">04</span>
+          <div><h3>Your ticket is linked to your phone number</h3><p>Your ticket is linked to the phone number used during purchase.</p></div>
+        </div>
+        <div class="step">
+          <span class="num">05</span>
+          <div><h3>Check your ticket</h3><p>Use the <a href="#check"><strong>Check Tickets</strong></a> section to check your ticket and access official draw information.</p></div>
+        </div>
+        <div class="step">
+          <span class="num">06</span>
+          <div><h3>Winners are notified</h3><p>Winners will receive a notification through the phone number associated with their ticket and will be contacted for verification.</p></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Buy / Form ===== -->
+  <!-- ===== Check tickets ===== -->
+  <section class="check" id="check">
+    <div class="wrap">
+      <div class="check-card">
+        <span class="kicker">Check Tickets</span>
+        <h2>Check your ticket</h2>
+        <p class="sub">Your ticket is linked to the phone number used during purchase.</p>
+        <form id="checkForm" novalidate>
+          <div class="field">
+            <label for="checkPhone">Phone Number</label>
+            <input id="checkPhone" name="checkPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="e.g. 024 000 0000" required />
+          </div>
+          <button class="btn btn-primary btn-block btn-lg" type="submit">Check Ticket</button>
+        </form>
+        <div class="check-result" id="checkResult" role="status"></div>
+        <p class="fineprint">Winner verification is subject to the official Terms &amp; Conditions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Buy tickets ===== -->
   <section class="buy" id="buy">
     <div class="wrap buy-grid">
       <div class="buy-copy">
-        <h2>Buy your <span class="hl">Thank You Teacher</span> tickets</h2>
-        <p>Reserve your tickets in under a minute. Every GHc 20 brings Ghana one step closer to its first self-sustaining cancer care centre.</p>
+        <span class="kicker">Buy Tickets</span>
+        <h2>Thank You, Teacher</h2>
+        <div class="price-tag">GHS 50 per ticket</div>
+        <p>Choose your number of tickets and complete your purchase through the available channels.</p>
         <div class="trust">
-          <div><span class="ic" aria-hidden="true">✓</span> Just GHc 20 per ticket</div>
-          <div><span class="ic" aria-hidden="true">✓</span> 25 prizes including houses, EV cars &amp; cash</div>
-          <div><span class="ic" aria-hidden="true">✓</span> 100% supports the GNAT Cancer Foundation Fund</div>
+          <div><span class="ic" aria-hidden="true">✓</span> Pay by Card, Mobile Money or USSD</div>
+          <div><span class="ic" aria-hidden="true">✓</span> Your ticket is linked to your phone number</div>
+          <div><span class="ic" aria-hidden="true">✓</span> Proceeds support the GNAT Cancer Foundation</div>
           <div><span class="ic" aria-hidden="true">✓</span> Strictly 18 years and above</div>
         </div>
       </div>
 
       <div class="form-card">
-        <h3>Reserve your tickets 🎟️</h3>
-        <p class="sub">Fill in your details and we'll guide you through payment.</p>
-        <form id="raffleForm" novalidate>
+        <h3>Buy tickets 🎟️</h3>
+        <p class="sub">Complete the details below to proceed to payment.</p>
+        <form id="buyForm" novalidate>
           <div class="field">
-            <label for="fullname">Full name</label>
-            <input id="fullname" name="fullname" type="text" autocomplete="name" placeholder="e.g. Ama Mensah" required />
-          </div>
-          <div class="field">
-            <label for="phone">Phone number (MoMo)</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="e.g. 024 000 0000" required />
-          </div>
-          <div class="field">
-            <label for="email">Email (optional)</label>
-            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" />
-          </div>
-          <div class="field">
-            <label for="dedicate">🍎 Dedicate this ticket to a teacher (optional)</label>
-            <input id="dedicate" name="dedicate" type="text" maxlength="80" placeholder="e.g. In honour of Madam Akua, my Primary 4 teacher" />
-          </div>
-          <div class="field">
-            <label for="qty">Number of tickets</label>
+            <label for="qty">Number of Tickets</label>
             <select id="qty" name="qty">
-              <option value="1">1 ticket — GHc 20</option>
-              <option value="2">2 tickets — GHc 40</option>
-              <option value="3">3 tickets — GHc 60</option>
-              <option value="5" selected>5 tickets — GHc 100</option>
-              <option value="10">10 tickets — GHc 200</option>
-              <option value="20">20 tickets — GHc 400</option>
-              <option value="50">50 tickets — GHc 1,000</option>
+              <option value="1">1 ticket | GHS 50</option>
+              <option value="2">2 tickets | GHS 100</option>
+              <option value="3">3 tickets | GHS 150</option>
+              <option value="5" selected>5 tickets | GHS 250</option>
+              <option value="10">10 tickets | GHS 500</option>
+              <option value="20">20 tickets | GHS 1,000</option>
+              <option value="50">50 tickets | GHS 2,500</option>
+              <option value="custom">Custom</option>
             </select>
+          </div>
+          <div class="field" id="customWrap" hidden>
+            <label for="customQty">How many tickets?</label>
+            <input id="customQty" name="customQty" type="number" min="1" max="1000" step="1" placeholder="Enter a number" />
+          </div>
+          <div class="field">
+            <label for="pay-card">Payment Method</label>
+            <div class="seg" role="radiogroup" aria-label="Payment Method">
+              <label><input id="pay-card" type="radio" name="payment" value="Card" checked /><span>Card</span></label>
+              <label><input id="pay-momo" type="radio" name="payment" value="MoMo" /><span>MoMo</span></label>
+              <label><input id="pay-ussd" type="radio" name="payment" value="USSD" /><span>USSD</span></label>
+            </div>
+          </div>
+          <div class="field">
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="e.g. 024 000 0000" required />
           </div>
           <div class="summary">
             <span>Total to pay</span>
-            <strong id="total">GHc 100</strong>
+            <strong id="total">GHS 250</strong>
           </div>
-          <label class="check">
+          <label class="check-line">
             <input id="age" name="age" type="checkbox" required />
-            <span>I confirm that I am <strong>18 years or older</strong> and accept the raffle terms &amp; conditions.</span>
+            <span>I confirm that I am <strong>18 years or older</strong> and accept the raffle Terms &amp; Conditions.</span>
           </label>
-          <button class="btn btn-primary btn-block btn-lg" type="submit">Continue to Payment</button>
-          <p class="form-note">🔒 Your details are kept private and used only for this raffle.</p>
+          <button class="btn btn-primary btn-block btn-lg" type="submit">Proceed to Payment</button>
+          <p class="form-note">Your ticket will be linked to the phone number provided.</p>
         </form>
-        <div class="form-success" id="formSuccess" role="status">
-          🎉 Thank you! Your ticket request has been received. We'll contact you shortly to complete payment. Good luck!
-        </div>
+        <div class="form-success" id="buySuccess" role="status"></div>
       </div>
     </div>
   </section>
@@ -544,30 +637,63 @@
   <!-- ===== FAQ ===== -->
   <section class="faq" id="faq">
     <div class="wrap">
-      <div class="section-head">
-        <span class="kicker">Good to know</span>
-        <h2>Frequently asked questions</h2>
+      <div class="sec-head">
+        <span class="kicker">FAQ</span>
+        <h2 class="sec-title">Questions? We've got answers.</h2>
       </div>
       <div class="faq-list">
         <details open>
-          <summary>How much is a ticket?</summary>
-          <p>Each Thank You Teacher Raffle ticket costs <strong>GHc 20</strong>. You can buy as many as you like — more tickets mean more chances to win.</p>
+          <summary>What is Thank You, Teacher?</summary>
+          <p>Thank You, Teacher is an annual national fundraising initiative by the Ghana National Association of Teachers (GNAT), created to recognise the contribution of teachers while raising funds for causes that matter to Ghana.</p>
         </details>
         <details>
-          <summary>Who can take part?</summary>
-          <p>The raffle is open to everyone aged <strong>18 years and above</strong>. You'll be asked to confirm your age when you buy.</p>
+          <summary>What is this year's initiative supporting?</summary>
+          <p>For 2026, proceeds will support the GNAT Cancer Foundation and its vision for stronger cancer care and research capacity in Ghana.</p>
+        </details>
+        <details>
+          <summary>Will the initiative support the same cause every year?</summary>
+          <p>Not necessarily. Thank You, Teacher is an annual initiative, and the area of impact may change from year to year.</p>
+        </details>
+        <details>
+          <summary>Who can participate?</summary>
+          <p>Participation is open to persons aged 18 years and above, subject to the official Terms &amp; Conditions.</p>
+        </details>
+        <details>
+          <summary>How much is a ticket?</summary>
+          <p>Each ticket costs GHS 50.</p>
         </details>
         <details>
           <summary>What can I win?</summary>
-          <p>First Prize: 5 two-bedroom houses · Second Prize: 5 electric cars · Third Prize: 5 motorcycles · Second Level Draw: 10 cheques valued at GHS 15,000 each — 25 winners in total.</p>
+          <p>Prizes include a two-bedroom house, a one-bedroom house, an electric vehicle, motorcycles, household appliances, branded merchandise and much more.</p>
         </details>
         <details>
-          <summary>Where does my money go?</summary>
-          <p>Proceeds support the Cancer Foundation of the Ghana National Association of Teachers' Fund, raising GHC 100 million annually to build and sustain Ghana's premier cancer care &amp; research centre.</p>
+          <summary>How is my ticket linked to me?</summary>
+          <p>Your ticket is linked to the phone number used during purchase.</p>
+        </details>
+        <details>
+          <summary>How do I check my ticket?</summary>
+          <p>Use the <a href="#check">Check Tickets</a> section and enter your ticket number and associated phone number.</p>
         </details>
         <details>
           <summary>How will I know if I've won?</summary>
-          <p>Winners are drawn after ticket sales close and contacted directly using the details provided at purchase. Results are also published officially.</p>
+          <p>Winners will receive a notification through the phone number associated with their ticket and will be contacted for verification.</p>
+        </details>
+        <details>
+          <summary>When is the Grand Draw?</summary>
+          <p>December 1, 2026.</p>
+        </details>
+        <details>
+          <summary>How can I purchase a ticket?</summary>
+          <p>Tickets can be purchased through the official campaign channels. The USSD code and other purchase details will be provided once confirmed.</p>
+        </details>
+        <details>
+          <summary>Is the raffle licensed?</summary>
+          <p>The Thank You, Teacher raffle is licensed and approved by the National Lottery Authority (NLA) and is subject to the applicable regulatory requirements.</p>
+        </details>
+        <details>
+          <summary>Where can I find the Terms &amp; Conditions?</summary>
+          <!-- TODO: point this link at the official Terms & Conditions document -->
+          <p>Full Terms &amp; Conditions are available <a href="#faq">here</a>.</p>
         </details>
       </div>
     </div>
@@ -576,78 +702,124 @@
   <!-- ===== Footer ===== -->
   <footer class="site">
     <div class="wrap">
-      <div class="foot-top">
-        <div class="foot-brand">
-          <a class="brand" href="#top">
-            <span class="mark" aria-hidden="true">🍎</span>
-            <span class="name">Thank You Teacher Raffle<small>Cancer Foundation · GNAT Fund</small></span>
-          </a>
-          <p>Win life-changing prizes while helping build Ghana's first self-sustaining cancer care &amp; research centre. Thank you for playing — and for giving back.</p>
-        </div>
-        <div class="foot-links">
-          <h4>Explore</h4>
-          <a href="about.html">About Us</a>
-          <a href="#mission">Our Mission</a>
-          <a href="#prizes">Prizes</a>
-          <a href="#how">How It Works</a>
-          <a href="#faq">FAQ</a>
-        </div>
-        <div class="foot-links">
-          <h4>Play responsibly</h4>
-          <a href="#buy">Buy Tickets</a>
-          <a href="#faq">Terms &amp; Conditions</a>
-          <a href="#faq">Eligibility (18+)</a>
-        </div>
+      <p class="foot-tagline">I am who I am <span class="hl">because I had a teacher</span>.</p>
+      <div class="foot-logo">
+        <span class="logo">
+          <span class="logo-mark" aria-hidden="true">🍎</span>
+          <span class="logo-text">Thank You, Teacher<small>A GNAT National Initiative</small></span>
+        </span>
       </div>
-      <div class="disclaimer">
-        <span>© <span id="year"></span> Thank You Teacher Raffle · Cancer Foundation of the GNAT Fund. All rights reserved.</span>
-        <span class="age-pill">18+ · Play Responsibly</span>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#prizes">Prizes</a>
+        <a href="#check">Check Tickets</a>
+        <a href="#buy">Buy Tickets</a>
+        <a href="#faq">FAQ</a>
+        <!-- TODO: point this link at the official Terms & Conditions document -->
+        <a href="#faq">Terms &amp; Conditions</a>
+      </nav>
+      <div class="foot-note">
+        <span class="licence"><span aria-hidden="true">🔞</span> 18+ · Licensed and approved by the National Lottery Authority</span>
+        <span>© <span id="year">2026</span> Powered by Corral Systems Limited — <a href="https://www.corralsystems.com" target="_blank" rel="noopener noreferrer">www.corralsystems.com</a>. All rights reserved.</span>
       </div>
     </div>
   </footer>
 
   <!-- ===== Sticky mobile CTA ===== -->
-  <div class="mobile-bar" aria-hidden="false">
-    <div class="info"><small>Ticket price</small><strong>GHc 20</strong></div>
-    <a class="btn btn-primary" href="#buy">🎟️ Buy Tickets</a>
+  <div class="mobile-bar">
+    <div class="info"><small>Per ticket</small><strong>GHS 50</strong></div>
+    <a class="btn btn-primary" href="#buy">🎟️ Buy a Ticket</a>
   </div>
 
   <script>
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Live total calculation
+    // Mobile navigation
+    var navToggle = document.getElementById('navToggle');
+    var navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', function () {
+      var open = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.textContent = open ? '✕' : '☰';
+    });
+    navLinks.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.textContent = '☰';
+      }
+    });
+
+    // Ticket total
+    var PRICE = 50;
     var qty = document.getElementById('qty');
+    var customWrap = document.getElementById('customWrap');
+    var customQty = document.getElementById('customQty');
     var total = document.getElementById('total');
-    var PRICE = 20;
-    function fmt(n){ return 'GHc ' + n.toLocaleString('en-GH'); }
-    function updateTotal(){ total.textContent = fmt(parseInt(qty.value, 10) * PRICE); }
-    qty.addEventListener('change', updateTotal);
+
+    function ticketCount() {
+      if (qty.value === 'custom') {
+        var n = parseInt(customQty.value, 10);
+        return isNaN(n) || n < 1 ? 0 : n;
+      }
+      return parseInt(qty.value, 10);
+    }
+    function updateTotal() {
+      total.textContent = 'GHS ' + (ticketCount() * PRICE).toLocaleString('en-GH');
+    }
+    qty.addEventListener('change', function () {
+      var isCustom = qty.value === 'custom';
+      customWrap.hidden = !isCustom;
+      customQty.required = isCustom;
+      if (isCustom) { customQty.focus(); }
+      updateTotal();
+    });
+    customQty.addEventListener('input', updateTotal);
     updateTotal();
 
-    // Form handling (placeholder — wire to your payment/backend endpoint later)
-    var form = document.getElementById('raffleForm');
-    var success = document.getElementById('formSuccess');
-    form.addEventListener('submit', function (e) {
+    // Buy form (placeholder — wire to the payment gateway / backend later)
+    var buyForm = document.getElementById('buyForm');
+    var buySuccess = document.getElementById('buySuccess');
+    buyForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      if (!form.checkValidity()) {
-        if (!document.getElementById('age').checked) {
-          alert('Please confirm you are 18 years or older to continue.');
-        } else {
-          form.reportValidity();
-        }
+      if (!document.getElementById('age').checked) {
+        alert('Please confirm you are 18 years or older to continue.');
         return;
       }
-      // TODO: send to backend / payment gateway here. Example payload:
-      // { fullname, phone, email, dedicate, qty, amount }
-      var dedicate = document.getElementById('dedicate').value.trim();
-      if (dedicate) {
-        // textContent keeps user input safe (no HTML injection)
-        success.textContent = '🎉 Thank you! Your ticket honours "' + dedicate + '". We’ve received your request and will contact you shortly to complete payment. Good luck!';
+      if (ticketCount() < 1) {
+        alert('Please enter how many tickets you would like to buy.');
+        customQty.focus();
+        return;
       }
-      form.style.display = 'none';
-      success.style.display = 'block';
-      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (!buyForm.checkValidity()) { buyForm.reportValidity(); return; }
+
+      // TODO: send to the payment gateway / backend. Example payload:
+      // { tickets: ticketCount(), amount: ticketCount() * PRICE,
+      //   payment: document.querySelector('input[name=payment]:checked').value,
+      //   phone: document.getElementById('phone').value }
+      var count = ticketCount();
+      var method = document.querySelector('input[name="payment"]:checked').value;
+      buySuccess.textContent = '🎟️ Thank you! ' + count + (count === 1 ? ' ticket' : ' tickets')
+        + ' (GHS ' + (count * PRICE).toLocaleString('en-GH') + ') reserved via ' + method
+        + '. Your ticket will be linked to ' + document.getElementById('phone').value
+        + '. We will contact you to complete payment.';
+      buyForm.style.display = 'none';
+      buySuccess.style.display = 'block';
+      buySuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    // Check ticket (placeholder — wire to the ticket lookup service later)
+    var checkForm = document.getElementById('checkForm');
+    var checkResult = document.getElementById('checkResult');
+    checkForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var phone = document.getElementById('checkPhone').value.trim();
+      if (!phone) { checkForm.reportValidity(); return; }
+      // TODO: look up tickets for this phone number via the backend.
+      checkResult.textContent = 'Ticket checking opens closer to the Grand Draw. We have noted ' + phone
+        + ' — official draw information will be published here.';
+      checkResult.style.display = 'block';
     });
   </script>
 </body>
